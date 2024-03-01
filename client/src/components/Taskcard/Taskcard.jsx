@@ -1,4 +1,4 @@
-
+import taskcard from './Taskcard.css';
 
 
 export default function Taskcard() {
