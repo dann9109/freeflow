@@ -4,7 +4,10 @@ export default function Header() {
     return (
         <div>
             <h1>Excalibur</h1>
-            <p>Welcome to Excalibur. The nights at our round table our </p>
+            <p>
+                Welcome to Excalibur. Join our Round Table where freelancers can offer complete transparency in the cost of enhancing a companies technilogical footprint and ability.
+
+            </p>
         </div>
     )
 }
