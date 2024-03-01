@@ -19,7 +19,7 @@ const userSchema = new Schema(
             type: String,
             required: true,
         },
-        // set savedBooks to be an array of data that adheres to the bookSchema
+        // set savedClients to be an array of data that adheres to the clientSchema
         tasks: [
             { type: Schema.Types.ObjectId, ref: 'Task' }
         ],
@@ -50,9 +50,9 @@ userSchema.methods.isCorrectPassword = async function (password) {
     return bcrypt.compare(password, this.password);
 };
 
-// when we query a user, we'll also get another field called `bookCount` with the number of saved books we have
-userSchema.virtual('bookCount').get(function () {
-    return this.savedBooks.length;
+// when we query a user, we'll also get another field called `clientCount` with the number of saved clients we have
+userSchema.virtual('clientCount').get(function () {
+    return this.savedClients.length;
 });
 
 const User = model('User', userSchema);

@@ -50,7 +50,7 @@ const taskSchema = new Schema(
 );
 
 
-// when we query a user, we'll also get another field called `bookCount` with the number of saved books we have
+// when we query a user, we'll also get another field called `taskCount` with the number of saved tasks we have
 taskSchema.virtual('total').get(function () {
     return this.hours * this.rate;
 });

@@ -38,8 +38,8 @@ const clientSchema = new Schema(
 
 
 
-// when we query a user, we'll also get another field called `clientCount` with the number of saved books we have
-userSchema.virtual('bookCount').get(function () {
+// when we query a user, we'll also get another field called `clientCount` with the number of saved clients we have
+userSchema.virtual('clientCount').get(function () {
     return this.savedClients.length;
 });
 
