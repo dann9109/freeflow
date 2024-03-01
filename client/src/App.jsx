@@ -8,7 +8,7 @@ import {
 } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
 
-import Navbar from './components/Navbar';
+import Navbar from './components/Header';
 
 // Construct our main GraphQL API endpoint
 const httpLink = createHttpLink({
