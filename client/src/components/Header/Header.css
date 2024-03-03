@@ -1,7 +1,17 @@
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 0;
-    border-bottom: 1px solid #e1dada;
+  
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1em 2em;
+      
+      
 }
+
+
+.h1{
+    font-weight: 500;
+    color: #840909;
+    text-decoration: inherit;
+  }
