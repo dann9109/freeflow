@@ -2,12 +2,20 @@ import './Header.css';
 
 export default function Header() {
     return (
-        <header>
-            <h1>Excalibur</h1>
-            <p>
-                Welcome to Excalibur. Join our Round Table where freelancers can offer complete transparency in the cost of enhancing a companies technilogical footprint and ability.
-
-            </p>
-        </header>
+     
+            <header className="header">
+                <h1>freeLancers</h1>
+                <nav>
+                    <ul>
+                        <li><a href="#">Login</a></li>
+                        <li><a href="#">Sign Up</a></li>
+                        <li><a href="#">Post a Job</a></li>
+                        <li><a href="#">Find a Job</a></li>
+                        <li><a href="#">Find a FreeLancer</a></li>
+                        <li><a href="#">How FreeLancer Works</a></li>
+                    </ul>
+                </nav>
+            </header>
+        
     )
 }
