@@ -11,7 +11,7 @@ const { expressMiddleware } = require('@apollo/server/express4')
 const app = express()
 const PORT = process.env.PORT || 3000
 
-const { typeDefs, resolvers } = require('./schema')
+const { typeDefs, resolvers } = require('./schema/lib')
 
 async function startServer() {
     const server = new ApolloServer({
@@ -50,9 +50,9 @@ async function startServer() {
     db.on('open', () => {
 
         //Start the server
-        app.listen(PORT, () => HTMLFormControlsCollection.log('Server started on port', PORT))
+        app.listen(PORT, () => console.log('Server started on port', PORT))
     })
 
-    startServer()
 }
 
+startServer()
