@@ -6,11 +6,14 @@ import Profile from './pages/Profile';
 import LoginForm from './pages/LoginForm';
 import SignupForm from './pages/SignupForm';
 import Invoice from './pages/Invoice';
+import Footer from './components/Footer/Footer'
+
 
 function App() {
   return (
     <>
       <Header />
+      <Footer />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/profile" element={<Profile />} />
