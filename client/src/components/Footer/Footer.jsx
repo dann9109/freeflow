@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 export default function Footer() {
     return (
-        <>
+      <>
         <footer>
             <div>
                 <a href="#">
@@ -28,7 +28,6 @@ export default function Footer() {
             </div>
             <p>© 2024 freeLance. All rights reserved.</p>
         </footer>
-        </>
-
+      </>
     )
 }
