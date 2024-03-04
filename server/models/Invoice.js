@@ -2,13 +2,8 @@ const { Schema, model } = require('mongoose');
 
 
 
-const taskSchema = new Schema(
+const invoiceSchema = new Schema(
     {
-        _id: {
-            type: Number,
-            required: true,
-            unique: true,
-        },
         taskname: {
             type: String,
             required: true,
@@ -28,7 +23,23 @@ const taskSchema = new Schema(
             required: true,
         },
 
-        Project_id: {
+        miscillaneous: {
+            type: String,
+            required: true,
+            unique: true,
+
+        },
+        client: {
+            type: String,
+            required: true,
+        },
+        address: {
+            type: String,
+            required: true,
+            unique: true,
+
+        },
+        amountdue: {
             type: Number,
             required: true,
         },
@@ -43,11 +54,8 @@ const taskSchema = new Schema(
 );
 
 
-// when we query a user, we'll also get another field called `taskCount` with the number of saved tasks we have
-taskSchema.virtual('total').get(function () {
-    return this.hours * this.rate;
-});
 
-const Task = model('Task', taskSchema);
 
-module.exports = Task;
+const Task = model('Invoice', invoiceSchema);
+
+module.exports = Invoice;

@@ -1,11 +1,34 @@
 import './Footer.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 export default function Footer() {
     return (
-        <div>
-            <h1>Footer</h1>
-            <p>Welcome to the Footer page</p>
-        </div>
+        <>
+        <footer>
+            <div>
+                <a href="#">
+                    <img src="/images/icons8-facebook-48.png" alt="" />
+                </a>
+            </div>
+            <div>
+                <a href="#">
+                    <img src="/images/icons8-instagram-48.png" alt="" />
+                </a>
+            </div>
+            <div>
+                <a href="#">
+                    <img src="/images/icons8-linkedin-48.png" alt="" />
+                </a>
+            </div>
+            <div>
+                <a href="#">
+                    <img src="/images/icons8-twitter-48.png" alt="" />
+                </a>
+            </div>
+            <p>© 2024 freeLance. All rights reserved.</p>
+        </footer>
+        </>
+
     )
 }

@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import { loadStripe } from '@stripe/stripe-js';
+// import { loadStripe } from '@stripe/stripe-js';
 
-const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_PUBLISHABLE_KEY);
+// const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_PUBLISHABLE_KEY);
 
-const invoiceUrl = pk_live_51Opz8GGi33Sul8mpg7IoKjAONbSEu1rhblph9vn5SCwVJThASPohrAgTwaVSFX6oa9rcWpJasCoItU47vDGjeeOZ00pTp6Dpdv
+// const invoiceUrl = pk_live_51Opz8GGi33Sul8mpg7IoKjAONbSEu1rhblph9vn5SCwVJThASPohrAgTwaVSFX6oa9rcWpJasCoItU47vDGjeeOZ00pTp6Dpdv
 
 export default function Invoice() {
 
