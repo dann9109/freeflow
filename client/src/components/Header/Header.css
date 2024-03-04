@@ -1,17 +1,87 @@
 header {
-  
         display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        padding: 1em 2em;
-      
-      
+        justify-content: flex-end;
+        width: 100%;
+        padding-right: 5em;
+
 }
 
 
-.h1{
-    font-weight: 500;
-    color: #840909;
-    text-decoration: inherit;
-  }
+.adiv {
+        display: flex;
+        flex-direction: column;
+        border: none;
+        font-size: 25px;
+        text-align: center;
+        opacity: 0.5;
+}
+
+
+
+
+
+
+a:hover {
+        border-color: #780303;
+}
+
+a:focus,
+button:focus-visible {
+        outline: 4px auto -webkit-focus-ring-color;
+}
+
+
+
+.h1 {
+        display: flex;
+        flex-direction: row-reverse;
+        font-weight: 500;
+        color: #c21414;
+        justify-content: center;
+        text-decoration: inherit;
+        padding-top: .5em;
+        padding-bottom: .5em;
+        font-size: 50px;
+}
+
+
+
+.p2 {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        font-weight: 500;
+        color: #c21414;
+        text-decoration: inherit;
+        padding-top: .5em;
+        padding-bottom: .5em;
+        font-size: 25px;
+
+}
+
+
+
+
+
+.p1 {
+        display: flex;
+        flex-direction: row;
+        font-weight: 500;
+        color: #c21414;
+        text-decoration: inherit;
+        justify-content: center;
+        padding-top: .5em;
+        padding-bottom: .5em;
+        font-size: 25px;
+}
+
+
+
+
+body {
+        margin: 0;
+        display: flex;
+        place-items: center;
+        min-width: 320px;
+        min-height: 100vh;
+}
