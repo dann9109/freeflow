@@ -4,8 +4,9 @@ import './Footer.css';
 export default function Footer() {
     return (
         <div>
-            <h1>Footer</h1>
-            <p>Welcome to the Footer page</p>
+            <p>Dan Stella, Nicolas Vacca, Connor Allen, Emily Cassel</p>
+            <p>&copy; 2024 freeLancers. All rights reserved.</p>
+           
         </div>
     )
 }
