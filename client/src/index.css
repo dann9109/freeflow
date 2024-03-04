@@ -5,6 +5,7 @@
 
   color-scheme: light dark;
 
+
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -15,6 +16,8 @@ html,body{
   min-height: 100vh;
 }
 
+
+
 body{
   background-image: url("./images/horse.png");
   background-repeat: no-repeat;
@@ -22,12 +25,14 @@ body{
   background-position: center;
 }
 
-#root{
-  width: 100%;
+a {
+  font-weight: 500;
+  color: #840909;
+  text-decoration: inherit;
 }
 
 a:hover {
-  color: #ffffff;
+  color: #535bf2;
 }
 
 body {
@@ -39,9 +44,25 @@ body {
 }
 
 
+
+button:hover {
+  border-color: #780303;
+}
+
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+
+
+
+
+
+
 @media (prefers-color-scheme: light) {
   :root {
-    color: #472142;
+    color: #213547;
    
   }
 

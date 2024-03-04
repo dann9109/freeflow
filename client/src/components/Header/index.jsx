@@ -8,8 +8,8 @@ export default function Header() {
                 <h1 className="h1">FreeLancers</h1>
                 <nav className="a">
                     <div className="adiv">
-                    <button><a href="/login"></a></button>
-                    <button><a href="/signup"></a></button>
+                        <button><a href="/login"></a></button>
+                        <button><a href="/signup"></a></button>
                     </div>
                 </nav>
                 <p className="p1">Bring in the Calvary</p>
