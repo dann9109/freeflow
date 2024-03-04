@@ -1,4 +1,5 @@
 import './Header.css';
+import{NavLink}from"react-router-dom";
 
 export default function Header() {
     return (
@@ -8,8 +9,8 @@ export default function Header() {
                 <h1 className="h1">FreeLancers</h1>
                 <nav className="a">
                     <div className="adiv">
-                        <button><a href="/login"></a></button>
-                        <button><a href="/signup"></a></button>
+                        <button><NavLink to="/login">Login</NavLink></button>
+                        <button><NavLink to="/signup">Sign Up</NavLink></button>
                     </div>
                 </nav>
                 <p className="p1">Bring in the Calvary</p>

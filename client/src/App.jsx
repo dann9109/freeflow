@@ -1,5 +1,5 @@
 
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, useLocation } from 'react-router-dom';
 import Header from './components/Header';
 import Home from './pages/Home';
 import Profile from './pages/Profile';
@@ -8,9 +8,12 @@ import SignupForm from './pages/SignupForm';
 import Invoice from './pages/Invoice';
 
 function App() {
+  const location = useLocation();
   return (
-    <>
-      <Header />
+    <main class={`pageLayout ${location.pathname === '/'
+    ? 'mainBackground'
+    : ''}`
+    }>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/profile" element={<Profile />} />
@@ -18,7 +21,8 @@ function App() {
         <Route path="/signup" element={<SignupForm />} />
         <Route path="/invoice" element={<Invoice />} />
       </Routes>
-    </>
+      <Header />
+    </main>
   );
 }
 
