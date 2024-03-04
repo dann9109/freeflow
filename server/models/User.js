@@ -4,6 +4,10 @@ const bcrypt = require('bcrypt');
 
 const userSchema = new Schema(
     {
+        _id: {
+            type: Schema.Types.ObjectId,
+            default: () => new Types.ObjectId(),
+        },
         username: {
             type: String,
             required: true,
@@ -19,22 +23,18 @@ const userSchema = new Schema(
             type: String,
             required: true,
         },
-        // set savedClients to be an array of data that adheres to the clientSchema
-        tasks: [
-            { type: Schema.Types.ObjectId, ref: 'Task' }
-        ],
-        clients: [
-            { type: Schema.Types.ObjectId, ref: 'Client' }
-        ],
+        projects: {
+            type: Schema.Types.ObjectId,
+            ref: 'Project'
+        }
     },
     // set this to use virtual below
     {
         toJSON: {
             virtuals: true,
-        },
+        }
     }
 );
-
 // hash user password
 userSchema.pre('save', async function (next) {
     if (this.isNew || this.isModified('password')) {
