@@ -4,16 +4,6 @@ const { Schema, model } = require('mongoose');
 
 const invoiceSchema = new Schema(
     {
-        taskname: {
-            type: String,
-            required: true,
-            unique: true,
-        },
-        description: {
-            type: String,
-            required: true,
-            unique: true,
-        },
         rate: {
             type: Number,
             required: true,
@@ -23,17 +13,7 @@ const invoiceSchema = new Schema(
             required: true,
         },
 
-        miscillaneous: {
-            type: String,
-            required: true,
-            unique: true,
-
-        },
-        client: {
-            type: String,
-            required: true,
-        },
-        address: {
+        miscellaneous: {
             type: String,
             required: true,
             unique: true,
@@ -43,6 +23,10 @@ const invoiceSchema = new Schema(
             type: Number,
             required: true,
         },
+        project: {
+            type: Schema.Types.ObjectId,
+            ref: 'Project'
+        }
 
     },
     // set this to use virtual below
@@ -56,6 +40,6 @@ const invoiceSchema = new Schema(
 
 
 
-const Task = model('Invoice', invoiceSchema);
+const Invoice = model('Invoice', invoiceSchema);
 
 module.exports = Invoice;

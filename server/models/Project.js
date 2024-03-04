@@ -1,7 +1,7 @@
 const { Schema, model } = require('mongoose');
 
 
-const projectSchema = new Project({
+const projectSchema = new Schema({
 
   title: {
     type: String,
@@ -29,17 +29,25 @@ const projectSchema = new Project({
     required: true,
     unique: true,
   },
-  tasks: {
+  tasks: [{
     type: String,
     required: true,
     ref: 'Task',
     unique: true,
-  },
+  }],
   user: {
     type: String,
     required: true,
     ref: 'User',
     unique: true,
   },
+  invoice: {
+    type: Schema.Types.ObjectId,
+    ref: 'Invoice'
+  }
 
 })
+
+const Project = model('Project', projectSchema);
+
+module.exports = Project;

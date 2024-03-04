@@ -4,17 +4,8 @@ const { Schema, model } = require('mongoose');
 
 const taskSchema = new Schema(
     {
-        _id: {
-            type: Number,
-            required: true,
-            unique: true,
-        },
-        taskname: {
-            type: String,
-            required: true,
-            unique: true,
-        },
-        description: {
+      
+        text: {
             type: String,
             required: true,
             unique: true,
@@ -28,9 +19,9 @@ const taskSchema = new Schema(
             required: true,
         },
 
-        Project_id: {
-            type: Number,
-            required: true,
+        project: {
+            type: Schema.Types.ObjectId,
+            ref: 'Project'
         },
 
     },

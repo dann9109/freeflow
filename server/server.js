@@ -11,7 +11,8 @@ const { expressMiddleware } = require('@apollo/server/express4')
 const app = express()
 const PORT = process.env.PORT || 3000
 
-const { typeDefs, resolvers } = require('./schema/lib')
+const { typeDefs, resolvers } = require('./schema')
+const { authenticate } = require('./config/auth')
 
 async function startServer() {
     const server = new ApolloServer({
@@ -29,12 +30,7 @@ async function startServer() {
 
     // Apollo/GraphQL Middleware
     app.use('/graphql', expressMiddleware(server, {
-        context(data) {
-            return {
-                req: data.req,
-                res: data.res
-            }
-        }
+        context: authenticate 
     }))
 
     if (process.env.NODE_ENV === 'production') {

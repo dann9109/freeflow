@@ -4,10 +4,7 @@ const bcrypt = require('bcrypt');
 
 const userSchema = new Schema(
     {
-        _id: {
-            type: Schema.Types.ObjectId,
-            default: () => new Types.ObjectId(),
-        },
+      
         username: {
             type: String,
             required: true,
@@ -23,10 +20,10 @@ const userSchema = new Schema(
             type: String,
             required: true,
         },
-        projects: {
+        projects: [{
             type: Schema.Types.ObjectId,
             ref: 'Project'
-        }
+        }]
     },
     // set this to use virtual below
     {
