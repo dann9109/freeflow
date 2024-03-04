@@ -1,4 +1,5 @@
 const { sign, verify } = require('jsonwebtoken')
+const {User} = require('../models') 
 
 function createToken(user_id) {
     const token = sign({ user_id }, process.env.JWT_SECRET)
@@ -35,4 +36,20 @@ function protect(resolver) {
     }
 }
 
-module.exports = { createToken, verifyToken, protect }
+async function authenticate({req, res}) {
+    if(!req.cookies.token)
+        return { req, res }
+
+    try {
+        const token = req.cookies.token
+        const { user_id } = verify(token, process.env.JWT_SECRET)
+        const user = await User.findById(user_id)
+        console.log(user_id)
+        return { req, res, user }
+    } catch (err) {
+        console.log(err)
+        return { req, res }
+    }
+}
+
+module.exports = { createToken, verifyToken, protect, authenticate }
