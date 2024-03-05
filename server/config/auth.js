@@ -37,6 +37,7 @@ function protect(resolver) {
 }
 
 async function authenticate({req, res}) {
+    console.log(req.cookies)
     if(!req.cookies.token)
         return { req, res }
 

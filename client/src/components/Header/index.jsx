@@ -1,7 +1,15 @@
 import './Header.css';
-import{NavLink}from"react-router-dom";
+import { NavLink } from 'react-router-dom';
+import { useMutation, useQuery } from '@apollo/client'
+import { AUTHENTICATE } from '../../utils/queries'
+import { LOGOUT_USER } from '../../utils/mutations'
 
 export default function Header() {
+
+    const { data: userData } = useQuery(AUTHENTICATE)
+    const [logoutUser] = useMutation(LOGOUT_USER, {
+        refetchQueries: [AUTHENTICATE]
+    })
     return (
 
         <header className="header">
