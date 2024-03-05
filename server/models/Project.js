@@ -25,7 +25,7 @@ const projectSchema = new Schema({
     unique: true,
   },
   client_phone_number: {
-    type: Number,
+    type: String,
     required: true,
     unique: true,
   },

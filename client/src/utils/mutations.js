@@ -21,17 +21,13 @@ export const LOGIN_USER = gql`
   }
 `;
 
-// export const ADD_USER = gql`
-//   mutation addUser($username: String!, $email: String!, $password: String!) {
-//     addUser(username: $username, email: $email, password: $password) {
-//       token
-//       user {
-//         _id
-//         username
-//       }
-//     }
-//   }
-// `;
+export const CREATE_PROJECT = gql`
+  mutation CreateProject($title: String!, $description: String!, $client_name: String!, $client_address: String!, $client_phone_number: String!) {
+    createProject(title: $title, description: $description, client_name: $client_name, client_address: $client_address, client_phone_number: $client_phone_number) {
+      message
+    }
+  }
+`;
 
 export const SAVE_CLIENT = gql`
   mutation saveClient($clientData: ClientInput!) {
@@ -48,6 +44,7 @@ export const SAVE_CLIENT = gql`
     }
   }
 `;
+
 
 export const REMOVE_CLIENT = gql`
   mutation removeClient($clientId: ID!) {
