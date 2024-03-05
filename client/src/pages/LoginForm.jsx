@@ -2,18 +2,23 @@
 
 import { useState, useEffect } from 'react';
 import { Form, Button, Alert } from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom'
 
 import { useMutation } from '@apollo/client';
 import { LOGIN_USER } from '../utils/mutations';
+import { AUTHENTICATE } from '../utils/queries';
 
-import Auth from '../utils/auth';
+
 
 const LoginForm = () => {
+  const navigate = useNavigate()
   const [userFormData, setUserFormData] = useState({ email: '', password: '' });
   const [validated] = useState(false);
   const [showAlert, setShowAlert] = useState(false);
 
-  const [login, { error }] = useMutation(LOGIN_USER);
+  const [login, { error }] = useMutation(LOGIN_USER, {
+    refetchQueries: [AUTHENTICATE]
+  });
 
   useEffect(() => {
     if (error) {
@@ -42,8 +47,7 @@ const LoginForm = () => {
         variables: { ...userFormData },
       });
 
-      console.log(data);
-      Auth.login(data.login.token);
+      navigate('/profile')
     } catch (e) {
       console.error(e);
     }

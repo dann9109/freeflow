@@ -3,8 +3,8 @@ import { Form, Button, Alert } from 'react-bootstrap';
 
 import { useMutation } from '@apollo/client';
 import { REGISTER_USER } from '../utils/mutations';
+import { AUTHENTICATE } from '../utils/queries';
 
-import Auth from '../utils/auth';
 
 const SignupForm = () => {
     // set initial form state
@@ -18,7 +18,9 @@ const SignupForm = () => {
     // set state for alert
     const [showAlert, setShowAlert] = useState(false);
 
-    const [addUser, { error }] = useMutation(REGISTER_USER);
+    const [addUser, { error }] = useMutation(REGISTER_USER, { 
+        refetchQueries: [AUTHENTICATE]
+    });
 
     useEffect(() => {
         if (error) {
@@ -48,7 +50,6 @@ const SignupForm = () => {
                 variables: { ...userFormData },
             });
             console.log(data);
-            Auth.login(data.addUser.token);
         } catch (err) {
             console.error(err);
         }
