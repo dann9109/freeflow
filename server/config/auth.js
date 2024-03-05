@@ -37,7 +37,6 @@ function protect(resolver) {
 }
 
 async function authenticate({req, res}) {
-    console.log(req.cookies)
     if(!req.cookies.token)
         return { req, res }
 
@@ -45,7 +44,6 @@ async function authenticate({req, res}) {
         const token = req.cookies.token
         const { user_id } = verify(token, process.env.JWT_SECRET)
         const user = await User.findById(user_id)
-        console.log(user_id)
         return { req, res, user }
     } catch (err) {
         console.log(err)

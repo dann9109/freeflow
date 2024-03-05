@@ -3,14 +3,12 @@ const gql = String.raw;
 const typeDefs = gql`
   type Task {
     _id: ID
-    taskname: String
-    description: String
+    text: String
     rate: Int
     hours: Int
     project: Project
     createdAt: String
     updatedAt: String
-    user: User
   }
 
   type Invoice {
@@ -55,6 +53,7 @@ const typeDefs = gql`
   type Query {
     getAllProjects: [GuestProject]
     getUserProjects: [Project]
+    getTasksByProjectId(project_id: ID): Project
     authenticate: User
   }
 
@@ -67,7 +66,7 @@ const typeDefs = gql`
     createProject(title: String, description: String, client_name: String, client_address: String, client_phone_number: String): Success
     editProject(title: String, description: String, client_name: String, client_address: String, client_phone_number: String): Success
     deleteProject(project_id: ID): Success
-    createTask(text: String,  rate: Int, hours: Int): Success
+    createTask(project_id: ID, text: String,  rate: Int, hours: Int): Success
     editTask(text: String, rate: Int, hours: Int, task_id: ID): Success
     deleteTask(task_id: ID): Success
     createInvoice(project_id: ID, rate: Int, hours: Int, miscellaneous: String, amountdue: Int): Success
