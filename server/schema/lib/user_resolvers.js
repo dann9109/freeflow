@@ -4,21 +4,9 @@ const { User } = require('../../models')
 
 module.exports = {
   queries: {
-    async authenticate(_, __, { req }) {
-      const token = req.cookies.token
-
-      if (!token) return null
-
-      try {
-        const user_id = verifyToken(token)
-
-        const user = await User.findById(user_id)
-
-        return user
-      } catch (err) {
-        console.log(err)
-        return null
-      }
+    async authenticate(_, __, { user }) {
+     
+      return user || null
     },
 
    
