@@ -18,7 +18,7 @@ export default function Header() {
                 </nav>
                 <a href="/"><h1 className="h1">FreeLancers</h1></a>
                 <nav className="a">
-                    <div className="adiv">
+                    <div className="div">
                         <button><NavLink to="/login">Login</NavLink></button>
                         <button><NavLink to="/signup">Sign Up</NavLink></button>
                     </div>
@@ -27,10 +27,10 @@ export default function Header() {
                 <p className="p2">
                     Increase Results
                 </p>
-                <p className="p2">
+                <p className="p3">
                     &
                 </p>
-                <p className="p2">
+                <p className="p4">
                     Provide Transparency
                 </p>
             </div>
