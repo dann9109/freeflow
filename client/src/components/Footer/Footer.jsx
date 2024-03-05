@@ -26,7 +26,7 @@ export default function Footer() {
                     <img src="/images/icons8-twitter-48.png" alt="" />
                 </a>
             </div>
-            <p>© 2024 freeLance. All rights reserved.</p>
+            <p>© 2024 freeLancers. All rights reserved.</p>
         </footer>
       </>
     )

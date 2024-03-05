@@ -14,15 +14,14 @@ export default function Header() {
 
         <header className="header">
             <div className="column">
-                <h1 className="h1">FreeLancers</h1>
+                <a href="/"><h1 className="h1">FreeLancers</h1></a>
                 {userData?.authenticate ? (
                     <>
-                        <nav className="a">
+                        <nav className="a buttonOrder">
+                            <p className="welcome">Welcome, {userData.authenticate.username}</p>
                             <div className="adiv">
-                                <p>Welcome, {userData.authenticate.username}</p>
-                                <button><NavLink to="/">Home</NavLink></button>
-                                <button><NavLink to="/profile">Profile</NavLink></button>
-                                <button onClick={logoutUser}>Log Out</button>
+                                <button><NavLink to="/profile" className="buttonsIn">Profile</NavLink></button>
+                                <button onClick={logoutUser} className="buttonsIn">Log Out</button>
                             </div>
                         </nav>
                     </>
@@ -30,17 +29,19 @@ export default function Header() {
                     <>
                         <nav className="a">
                             <div className="adiv">
-                            <NavLink to="/login">Login</NavLink>
-                            <NavLink to="/signup">Sign Up</NavLink>
-                            <NavLink to="/">Home</NavLink> 
-                            <NavLink to="/profile">Profile</NavLink> 
+                                <NavLink to="/login" className="buttonsIn">Login</NavLink>
+                                <NavLink to="/signup" className="buttonsIn">Sign Up</NavLink>
+                                <NavLink to="/profile" className="buttonsIn">Profile</NavLink>
                             </div>
                         </nav>
                         <p className="p1">Bring in the Calvary</p>
                         <p className="p2">
                             Increase Results
                         </p>
-                        <p className="p2">
+                        <p className="p3">
+                            &
+                        </p>
+                        <p className="p4">
                             Provide Transparency
                         </p>
                     </>
