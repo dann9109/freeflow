@@ -53,6 +53,10 @@ button:focus-visible {
   background-position: center;
 }
 
+.project-wrap{
+  color: #eee;
+}
+
 
 .defaultBackground {
   background-color: #131111;
