@@ -9,6 +9,8 @@ import Invoice from './pages/Invoice';
 import Footer from './components/Footer/Footer'
 import ProjectForm from './components/ProjectForm';
 import ProjectView from './components/ProjectView';
+import TaskView from './components/TaskView';
+import TaskForm from './components/TaskForm';
 
 
 
@@ -24,6 +26,8 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/profile" element={<Profile />}>
             <Route path="create" element={<ProjectForm />} />
+            <Route path="tasks/:project_id" element={<TaskView />} />
+            <Route path="task/create/:project_id" element={<TaskForm />} />
             <Route index element={<ProjectView />} />
           </Route>
           <Route path="/login" element={<LoginForm />} />

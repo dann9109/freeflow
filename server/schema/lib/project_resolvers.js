@@ -14,11 +14,24 @@ module.exports = {
       if (!user)
         throw new GraphQLError('Not Authorized')
 
-      const projects = await Project.find({ user: user._id })
+      const projects = await Project.find({ user: user._id }).populate('tasks')
 
       return projects
+    },
+
+    async getTasksByProjectId(_, args, { user }) {
+      if (!user)
+        throw new GraphQLError('Not Authorized')
+        console.log(args)
+      const project = await Project.findById(
+        args.project_id
+      ).populate('tasks')
+
+      return project
     }
   },
+
+
 
   mutations: {
     async createProject(_, args, { user }) {
@@ -48,14 +61,15 @@ module.exports = {
 
       try {
         const task = await Task.create(args)
+        console.log(args)
 
         await Project.findByIdAndUpdate(args.project_id, {
           $push: {
             tasks: task._id
           }
         })
-        
-        return { message: 'Project created successfully!' }
+
+        return { message: 'Task created successfully!' }
       } catch (error) {
         console.log(error)
       }

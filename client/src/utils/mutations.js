@@ -29,6 +29,14 @@ export const CREATE_PROJECT = gql`
   }
 `;
 
+export const CREATE_TASK = gql`
+  mutation Mutation($text: String, $rate: Int, $hours: Int, $project_id: ID) {
+    createTask(text: $text, rate: $rate, hours: $hours, project_id: $project_id) {
+      message
+    }
+  }
+`
+
 export const SAVE_CLIENT = gql`
   mutation saveClient($clientData: ClientInput!) {
     saveClient(clientData: $clientData) {
@@ -58,14 +66,6 @@ export const REMOVE_CLIENT = gql`
         phone
         address
       }
-    }
-  }
-`
-export const CREATE_TASK = gql`
-  mutation CreateTask($text: String!) {
-    createNote(text: $text) {
-      _id
-      text
     }
   }
 `
