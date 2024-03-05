@@ -7,6 +7,7 @@ export default function Profile() {
             <header>
                 <h1>Your Profile</h1>
                 <NavLink to="create">Create Project</NavLink>
+                <NavLink to="">View Projects</NavLink>
             </header>
             <Outlet />
         </div>
