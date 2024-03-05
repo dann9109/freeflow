@@ -239,7 +239,7 @@ a:hover {
 .buttonsIn:hover {
   background-color: #780303;
   border-color: #780303;
-  opacity: 1;
+  opacity: 3;
 }
 
 
@@ -262,7 +262,7 @@ nav {
 .buttonsIn {
   display: flex;
   background-color: black;
-  border: 10px solid #780303;
+  border: 5px solid #780303;
   padding: 5px;
   opacity: 0.5;
   margin: 0 40px;

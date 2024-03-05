@@ -12,7 +12,7 @@ export default function Header() {
     })
     return (
 
-        <header className="header">
+        <header className="profileHeader">
             <div className="column">
                 <a href="/"><h1 className="h1">FreeLancers</h1></a>
                 {userData?.authenticate ? (
@@ -31,7 +31,6 @@ export default function Header() {
                             <div className="adiv">
                                 <NavLink to="/login" className="buttonsIn">Login</NavLink>
                                 <NavLink to="/signup" className="buttonsIn">Sign Up</NavLink>
-                                <NavLink to="/profile" className="buttonsIn">Profile</NavLink>
                             </div>
                         </nav>
                         <p className="p1">Bring in the Calvary</p>
