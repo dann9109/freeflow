@@ -4,29 +4,32 @@ import { NavLink } from "react-router-dom"
 
 
 export default function ProjectView() {
-  const {data: projectData} = useQuery(GET_USER_PROJECTS)
+  const { loading, data } = useQuery(GET_USER_PROJECTS)
+  const projectData = data?.getUserProjects || []
+  console.log(data)
   return (
-      <>
-        <h1>Your Projects</h1>
-        <div className="project-wrap">
+    <>
+      <h1 className="pviewh1">Your Projects</h1>
+      <div className="project-wrap">
         {
-            projectData?.getUserProjects.map(project => (
-              <div className="project" key={project._id}>
-                <h3>{project.title}</h3>
-                <p>{project.description}</p>
-                <div className="client-info">
-                  <p>Client Name: {project.client_name}</p>
-                  <p>Client Address: {project.client_address}</p>
-                  <p>Client Phone Number: {project.client_phone_number}</p>
-                </div>
-                <NavLink to={`tasks/${project._id}`}>View Tasks</NavLink>
-                <NavLink to={`task/create/${project._id}`}>Create a Task</NavLink>
-
+          projectData.map(project => (
+            <div className="project" key={project._id}>
+              <h3>{project.title}</h3>
+              <p>{project.description}</p>
+              <div className="client-info">
+                <p>Client Name: {project.client_name}</p>
+                <p>Client Address: {project.client_address}</p>
+                <p>Client Phone Number: {project.client_phone_number}</p>
               </div>
-            ))
-          }
-        </div>
-         
-      </>
+              <div className="taskButtons">
+                <NavLink className="buttonSave" to={`tasks/${project._id}`}>View Tasks</NavLink>
+                <NavLink className="buttonSave" to={`task/create/${project._id}`}>Create a Task</NavLink>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+
+    </>
   )
 }
