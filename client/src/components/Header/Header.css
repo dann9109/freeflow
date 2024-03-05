@@ -5,7 +5,10 @@ header {
         display: flex;
         justify-content: flex-end;
         width: 100%;
-        padding-right: 5em;
+        padding-right: 0px;
+        padding-top: 0px;
+        margin-right: 0px;
+        margin-top: 0px;
 }
 
 
@@ -18,7 +21,7 @@ header {
         text-decoration: inherit;
         padding-top: 10px;
         padding-bottom: 10px;
-        font-size: 95px;
+        font-size: 115px;
         font-weight: bold;
         font-family: "MedievalSharp";
 
@@ -96,4 +99,5 @@ body {
         place-items: center;
         min-width: 320px;
         min-height: 100vh;
+        padding: 0;
 }

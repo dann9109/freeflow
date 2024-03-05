@@ -1,8 +1,6 @@
 import {useState} from 'react';
 import { useMutation, gql } from '@apollo/client';
 import { CREATE_PROJECT } from '../../utils/mutations';
-// import './Clientcard.css';
-
 
 
 const ProjectForm = () => {
@@ -39,42 +37,42 @@ const ProjectForm = () => {
 
   return (
     <form onSubmit={handleCreateProject}>
-      <div>
-        <h1>Client Management</h1>
-        <label htmlFor="clientTitle">Client Title:</label>
-        <input
+      <div className="client">
+        <h1 className="clientManagement">Client Information</h1>
+        <label htmlFor="clientTitle" className="clientLabel">Client Title:</label>
+        <input className="clientInput"
           type="text"
           id="clientTitle"
           value={formData.title}
           name="title"
           onChange={handleInputChange} />
 
-        <label htmlFor="clientDescription">Client Description:</label>
-        <input
+        <label htmlFor="clientDescription" className="clientLabel">Client Description:</label>
+        <input className="clientInput"
           type="text"
           id="clientDescription"
           value={formData.description}
           name="description"
           onChange={handleInputChange} />
 
-        <label htmlFor="clientName">Client Name:</label>
-        <input
+        <label htmlFor="clientName" className="clientLabel">Client Name:</label>
+        <input className="clientInput"
           type="text"
           id="clientName"
           value={formData.client_name}
           name="client_name"
           onChange={handleInputChange} />
 
-        <label htmlFor="clientAddress">Client Address :</label>
-        <input
+        <label htmlFor="clientAddress" className="clientLabel">Client Address :</label>
+        <input className="clientInput"
           type="text"
           id="clientAddress"
           value={formData.client_address}
           name="client_address"
           onChange={handleInputChange} />
 
-        <label htmlFor="clientPhoneNumber">Client Phone Number:</label>
-        <input
+        <label htmlFor="clientPhoneNumber" className="clientLabel">Client Phone Number:</label>
+        <input className="clientInput"
           type="text"
           id="clientPhoneNumber"
           value={formData.client_phone_number}
@@ -85,7 +83,7 @@ const ProjectForm = () => {
 
 
         {/* Add a button to save the client information */}
-        <button type="submit">Save</button>
+        <button type="submit" className="buttonSave">Save Client Information</button>
       </div>
     </form>
   );
