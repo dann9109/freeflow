@@ -28,24 +28,26 @@ body{
   min-height: 100vh;
 }
 
+mb-3{
+  color: blanchedalmond;
+  font-size: 10px;
+
+}
 
 
 a {
   font-weight: 500;
-  color: #860303;
+  color: blanchedalmond;
   text-decoration: inherit;
 }
 
 a:hover {
-  color: #000000;
+  color: blanchedalmond;
 }
 
 
-
-
-
 button:hover {
-  border-color: #780303;
+  border-color: #860303;
 }
 
 button:focus,
@@ -72,23 +74,38 @@ button:focus-visible {
 
 
 .defaultBackground{
-  background-color: grey;
+  background-color: #131111;
+}
+
+.form-label{
+  color: blanchedalmond;
+}
+
+.btn{
+  background-color: blanchedalmond;
+  border-color: #860303;
+}
+
+.formLogin{
+  width:400px;
+  background-color: #860303;
+  padding: 20px;
+  border-radius: 10px;
+  margin-left: 300px;
 }
 
 
-
-
-@media (prefers-color-scheme: light) {
+/* @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
    
   }
 
   a:hover {
-    color: #68686c;
+    color: antiquewhite;
   }
 
   button {
     background-color: #f9f9f9;
   }
-}
+} */

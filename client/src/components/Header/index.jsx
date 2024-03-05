@@ -6,7 +6,9 @@ export default function Header() {
 
         <header className="header">
             <div className="column">
-                <h1 className="h1">FreeLancers</h1>
+            <nav className="a">
+                </nav>
+                <a href="/"><h1 className="h1">FreeLancers</h1></a>
                 <nav className="a">
                     <div className="adiv">
                         <button><NavLink to="/login">Login</NavLink></button>
@@ -16,6 +18,9 @@ export default function Header() {
                 <p className="p1">Bring in the Calvary</p>
                 <p className="p2">
                     Increase Results
+                </p>
+                <p className="p2">
+                    &
                 </p>
                 <p className="p2">
                     Provide Transparency

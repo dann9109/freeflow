@@ -63,7 +63,7 @@ const SignupForm = () => {
     return (
         <>
             {/* This is needed for the validation functionality above */}
-            <Form noValidate validated={validated} onSubmit={handleFormSubmit}>
+            <Form noValidate validated={validated} onSubmit={handleFormSubmit} className="formLogin">
                 {/* show alert if server response is bad */}
                 <Alert
                     dismissible
@@ -127,7 +127,7 @@ const SignupForm = () => {
                         )
                     }
                     type="submit"
-                    variant="success"
+                    variant="secondary"
                 >
                     Submit
                 </Button>
