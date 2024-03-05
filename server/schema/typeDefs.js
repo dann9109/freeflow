@@ -28,7 +28,7 @@ const typeDefs = gql`
     description: String
     client_name: String
     client_address: String
-    client_phone_number: Int
+    client_phone_number: String
     tasks: [Task]
     user: User
   }
@@ -64,8 +64,8 @@ const typeDefs = gql`
     logoutUser: Success
 
 
-    createProject(title: String, description: String, client_name: String, client_address: String, client_phone_number: Int): Success
-    editProject(title: String, description: String, client_name: String, client_address: String, client_phone_number: Int): Success
+    createProject(title: String, description: String, client_name: String, client_address: String, client_phone_number: String): Success
+    editProject(title: String, description: String, client_name: String, client_address: String, client_phone_number: String): Success
     deleteProject(project_id: ID): Success
     createTask(text: String,  rate: Int, hours: Int): Success
     editTask(text: String, rate: Int, hours: Int, task_id: ID): Success
