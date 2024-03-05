@@ -8,33 +8,6 @@ header {
         padding-right: 5em;
 }
 
-.div {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        border: none;
-        font-size: 25px;
-        text-align: center;
-        opacity: 0.5;
-        width: 250px;
-        margin: 10px;
-}
-
-
-
-a:hover {
-        border-color: blanchedalmond;
-}
-
-a:focus,
-button:focus-visible {
-        outline: 4px auto -webkit-focus-ring-color;
-}
- nav{
-        display: flex;
-        justify-content: center;        
- }
-
 
 .h1 {
         display: flex;
@@ -55,7 +28,7 @@ button:focus-visible {
         display: flex;
         flex-direction: row;
         font-weight: 500;
-        color:blanchedalmond;
+        color: blanchedalmond;
         text-decoration: inherit;
         justify-content: center;
         padding-top: .75em;
@@ -124,5 +97,3 @@ body {
         min-width: 320px;
         min-height: 100vh;
 }
-
-

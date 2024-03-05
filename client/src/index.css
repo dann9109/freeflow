@@ -11,15 +11,18 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-html,body, #root, #root>main{
+html,
+body,
+#root,
+#root>main {
   min-height: 100vh;
 }
 
-#root{
+#root {
   width: 100%;
 }
 
-body{
+body {
 
   margin: 0;
   display: flex;
@@ -29,23 +32,8 @@ body{
 }
 
 
-a {
-  font-weight: 500;
-  color: blanchedalmond;
-  text-decoration: inherit;
- 
-}
 
 
-
-a:hover {
-  color: blanchedalmond;
-}
-
-
-button:hover {
-  border-color: #860303;
-}
 
 button:focus,
 button:focus-visible {
@@ -62,7 +50,7 @@ button:focus-visible {
   padding: 0 5%;
 }
 
-.mainBackground{
+.mainBackground {
   background-image: url("./images/horse.png");
   background-repeat: no-repeat;
   background-size: cover;
@@ -70,46 +58,135 @@ button:focus-visible {
 }
 
 
-.defaultBackground{
+.defaultBackground {
   background-color: #131111;
 }
 
-.form-label{
+.form-label {
   color: blanchedalmond;
 }
 
-.btn{
+.btn {
   background-color: blanchedalmond;
   border-color: #860303;
   width: 300px;
 }
 
-.formLogin{
-  width:400px;
+.formLogin {
+  width: 400px;
   background-color: #860303;
   padding: 20px;
   border-radius: 10px;
   margin-left: 300px;
 }
 
-.h1Profile{
+
+
+
+
+
+
+.h1Profile {
   display: flex;
   justify-content: center;
   color: #860303;
 }
 
+.create {
+  display: flex;
+  justify-content: center;
+}
 
-.create{
+.profileHeader {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+
+
+
+
+
+
+.adiv {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  border: none;
+  font-size: 25px;
+  text-align: center;
+  margin: 10px;
+}
+
+
+a {
+  font-weight: 500;
+  color: blanchedalmond;
+  text-decoration: inherit;
+}
+
+.welcome {
+  display: flex;
+  justify-content: center;
+  color: blanchedalmond;
+  font-size: 30px;
+  margin: 20px;
+}
+
+.buttonOrder {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+a:hover {
+  color: blanchedalmond;
+}
+
+.buttonsIn:hover {
+  background-color: #780303;
+  border-color: #780303;
+  opacity: 1;
+}
+
+
+a:hover {
+  border-color: blanchedalmond;
+}
+
+a:focus,
+.buttonsIn:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+nav {
   display: flex;
   justify-content: center;
 }
 
 
 
-.profileHeader{
+.buttonsIn {
   display: flex;
-  justify-content: center;
-  flex-direction: column;
+  background-color: black;
+  border: 10px solid #780303;
+  padding: 5px;
+  opacity: 0.5;
+  margin: 0 40px;
+}
+
+
+
+.buttonsIn:hover {
+  background-color: #780303;
+  border-color: #780303;
+  opacity: 1;
+}
+
+.buttonsIn.active {
+  background-color: transparent !important;
+  box-shadow: none !important;
 }
 
 
