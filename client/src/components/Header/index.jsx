@@ -14,34 +14,25 @@ export default function Header() {
 
         <header className="header">
             <div className="column">
-                <h1 className="h1">FreeLancers</h1>
-                {userData?.authenticate ? (
-                    <>
-                        <nav className="a">
-                            <div className="adiv">
-                                <p>Welcome, {userData.authenticate.username}</p>
-                                <button><NavLink to="/profile">Profile</NavLink></button>
-                                <button onClick={logoutUser}>Log Out</button>
-                            </div>
-                        </nav>
-                    </>
-                ) : (
-                    <>
-                        <nav className="a">
-                            <div className="adiv">
-                                <button><NavLink to="/login">Login</NavLink></button>
-                                <button><NavLink to="/signup">Sign Up</NavLink></button>
-                            </div>
-                        </nav>
-                        <p className="p1">Bring in the Calvary</p>
-                        <p className="p2">
-                            Increase Results
-                        </p>
-                        <p className="p2">
-                            Provide Transparency
-                        </p>
-                    </>
-                )}
+            <nav className="a">
+                </nav>
+                <a href="/"><h1 className="h1">FreeLancers</h1></a>
+                <nav className="a">
+                    <div className="div">
+                        <button><NavLink to="/login">Login</NavLink></button>
+                        <button><NavLink to="/signup">Sign Up</NavLink></button>
+                    </div>
+                </nav>
+                <p className="p1">Bring in the Calvary</p>
+                <p className="p2">
+                    Increase Results
+                </p>
+                <p className="p3">
+                    &
+                </p>
+                <p className="p4">
+                    Provide Transparency
+                </p>
             </div>
         </header>
 

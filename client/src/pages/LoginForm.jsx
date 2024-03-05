@@ -62,7 +62,7 @@ const LoginForm = () => {
   return (
     
     <>
-      <Form noValidate validated={validated} onSubmit={handleFormSubmit}>
+      <Form noValidate validated={validated} onSubmit={handleFormSubmit} className="formLogin">
         <Alert
           dismissible
           onClose={() => setShowAlert(false)}
@@ -103,7 +103,7 @@ const LoginForm = () => {
         <Button
           disabled={!(userFormData.email && userFormData.password)}
           type="submit"
-          variant="success"
+          variant="secondary"
         >
           Submit
         </Button>

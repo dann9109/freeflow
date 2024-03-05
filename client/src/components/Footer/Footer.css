@@ -1,6 +1,9 @@
 .footer{
     display: flex;
+    justify-content: center;
     background-color: #780303;
-    
-
+    color: blanchedalmond;
+    padding-top: 14px;
+    padding-bottom: 0px;
+    margin-top: px;
 }
