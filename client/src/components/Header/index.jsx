@@ -20,6 +20,7 @@ export default function Header() {
                         <nav className="a">
                             <div className="adiv">
                                 <p>Welcome, {userData.authenticate.username}</p>
+                                <button><NavLink to="/">Home</NavLink></button>
                                 <button><NavLink to="/profile">Profile</NavLink></button>
                                 <button onClick={logoutUser}>Log Out</button>
                             </div>
@@ -29,8 +30,10 @@ export default function Header() {
                     <>
                         <nav className="a">
                             <div className="adiv">
-                                <button><NavLink to="/login">Login</NavLink></button>
-                                <button><NavLink to="/signup">Sign Up</NavLink></button>
+                            <NavLink to="/login">Login</NavLink>
+                            <NavLink to="/signup">Sign Up</NavLink>
+                            <NavLink to="/">Home</NavLink> 
+                            <NavLink to="/profile">Profile</NavLink> 
                             </div>
                         </nav>
                         <p className="p1">Bring in the Calvary</p>
