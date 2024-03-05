@@ -14,10 +14,9 @@ export default function Header() {
 
         <header className="header">
             <div className="column">
-            <nav className="a">
-                </nav>
+            <nav className="a"></nav>
                 <a href="/"><h1 className="h1">FreeLancers</h1></a>
-                <nav className="a">
+                <nav className="a nav">
                     <div className="div">
                         <button><NavLink to="/login">Login</NavLink></button>
                         <button><NavLink to="/signup">Sign Up</NavLink></button>

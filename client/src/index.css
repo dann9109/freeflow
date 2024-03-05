@@ -92,6 +92,32 @@ button:focus-visible {
   margin-left: 300px;
 }
 
+.h1Profile{
+  display: flex;
+  justify-content: center;
+  color: #860303;
+}
+
+
+.create{
+  display: flex;
+  justify-content: center;
+}
+
+
+
+.profileHeader{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+
+
+
+
+
+
 
 /* @media (prefers-color-scheme: light) {
   :root {

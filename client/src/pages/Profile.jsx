@@ -4,9 +4,9 @@ import { NavLink, Outlet } from "react-router-dom"
 export default function Profile() {
     return (
         <div>
-            <header>
-                <h1>Your Profile</h1>
-                <NavLink to="create">Create Project</NavLink>
+            <header className="profileHeader">
+                <h1 className="h1Profile">Your Profile</h1>
+                <NavLink to="create" className="createProjectButton">Create Project</NavLink>
             </header>
             <Outlet />
         </div>

@@ -30,7 +30,10 @@ a:focus,
 button:focus-visible {
         outline: 4px auto -webkit-focus-ring-color;
 }
-
+ nav{
+        display: flex;
+        justify-content: center;        
+ }
 
 
 .h1 {
@@ -40,7 +43,7 @@ button:focus-visible {
         color: #780303;
         justify-content: center;
         text-decoration: inherit;
-        padding-top: .5em;
+        padding-top: 10px;
         padding-bottom: 10px;
         font-size: 95px;
         font-weight: bold;
