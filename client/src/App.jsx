@@ -8,6 +8,7 @@ import SignupForm from './pages/SignupForm';
 import Invoice from './pages/Invoice';
 import Footer from './components/Footer/Footer'
 import ProjectForm from './components/ProjectForm';
+import ProjectView from './components/ProjectView';
 
 
 
@@ -23,6 +24,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/profile" element={<Profile />}>
             <Route path="create" element={<ProjectForm />} />
+            <Route index element={<ProjectView />} />
           </Route>
           <Route path="/login" element={<LoginForm />} />
           <Route path="/signup" element={<SignupForm />} />
