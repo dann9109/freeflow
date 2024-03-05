@@ -5,7 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 export default function Footer() {
     return (
       <>
-        <footer>
+        <footer className="footer">
             <div>
                 <a href="#">
                     <img src="/images/icons8-facebook-48.png" alt="" />

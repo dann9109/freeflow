@@ -22,7 +22,7 @@ header {
 
 
 a:hover {
-        border-color: #780303;
+        border-color: #860303;
 }
 
 a:focus,
@@ -36,7 +36,7 @@ button:focus-visible {
         display: flex;
         flex-direction: row-reverse;
         font-weight: 500;
-        color: #c21414;
+        color: #860303;
         justify-content: center;
         text-decoration: inherit;
         padding-top: .5em;
@@ -51,7 +51,7 @@ button:focus-visible {
         flex-direction: row;
         justify-content: center;
         font-weight: 500;
-        color: #c21414;
+        color: #860303;
         text-decoration: inherit;
         padding-top: .5em;
         padding-bottom: .5em;
@@ -67,7 +67,7 @@ button:focus-visible {
         display: flex;
         flex-direction: row;
         font-weight: 500;
-        color: #c21414;
+        color:#860303;
         text-decoration: inherit;
         justify-content: center;
         padding-top: .5em;
@@ -85,3 +85,5 @@ body {
         min-width: 320px;
         min-height: 100vh;
 }
+
+

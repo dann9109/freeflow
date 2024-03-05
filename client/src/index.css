@@ -32,12 +32,12 @@ body{
 
 a {
   font-weight: 500;
-  color: #840909;
+  color: #860303;
   text-decoration: inherit;
 }
 
 a:hover {
-  color: #535bf2;
+  color: #000000;
 }
 
 
@@ -71,7 +71,9 @@ button:focus-visible {
 }
 
 
-
+.defaultBackground{
+  background-color: grey;
+}
 
 
 

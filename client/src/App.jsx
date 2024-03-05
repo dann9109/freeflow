@@ -12,21 +12,24 @@ import Footer from './components/Footer/Footer'
 function App() {
   const location = useLocation();
   return (
-    <main class={`pageLayout ${location.pathname === '/'
-    ? 'mainBackground'
-    : ''}`
-    }>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/profile" element={<Profile />} />
-        <Route path="/login" element={<LoginForm />} />
-        <Route path="/signup" element={<SignupForm />} />
-        <Route path="/invoice" element={<Invoice />} />
-      </Routes>
-      <Header />
+    <>
+      <main className={`pageLayout ${location.pathname === '/'
+        ? 'mainBackground'
+        : 'defaultBackground'}`
+      }>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/profile" element={<Profile />} />
+          <Route path="/login" element={<LoginForm />} />
+          <Route path="/signup" element={<SignupForm />} />
+          <Route path="/invoice" element={<Invoice />} />
+        </Routes>
+        <Header />
+      </main> 
       <Footer />
-    </main>
-  );
+    </>
+  )
+    ;
 }
 
 export default App;
