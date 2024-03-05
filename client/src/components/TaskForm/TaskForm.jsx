@@ -1,94 +1,87 @@
-import { useState, useEffect } from 'react'
+mport { useState } from 'react'
 import { useMutation } from '@apollo/client'
+import { useParams } from "react-router-dom"
 
-import { CREATE_TASK, EDIT_TASK } from '../graphql/mutations'
-import { GET_ALL_TASK, GET_USER_TASK } from '../graphql/queries'
 
-import { useStore } from '../store'
+import { CREATE_TASK } from '../../utils/mutations'
+import { GET_ALL_PROJECTS, GET_USER_PROJECTS } from '../../utils/queries'
+
 
 function TaskForm() {
-    const { state, setState } = useStore()
-    const [taskText, setTaskText] = useState('')
+
+    const params = useParams()
+    const [formData, setFormData] = useState({
+        text: '',
+        rate: 0,
+        hours: 0
+    })
+
+    const handleInputChange = (e) => {
+        setFormData({
+            ...formData,
+            [e.target.name]: e.target.value
+        })
+    }
     const [errorMessage, setErrorMessage] = useState('')
     const [createTask] = useMutation(CREATE_TASK, {
         variables: {
-            text: taskText
+            ...formData,
+            rate: +formData.rate,
+            hours: +formData.hours,
+            project_id: params.project_id
         },
-        refetchQueries: [GET_ALL_TASK, GET_USER_TASK]
-    })
-    const [editTask] = useMutation(EDIT_TASK, {
-        variables: {
-            text: taskText,
-            task_id: state.editTask?._id
-        },
-        refetchQueries: [GET_USER_TASK]
+        refetchQueries: [GET_ALL_PROJECTS, GET_USER_PROJECTS]
     })
 
-    useEffect(() => {
-        if (state.editTask) {
-            setTaskText(state.editTask.text)
-        }
-    }, [])
 
-    const createOrEditTask = async (e) => {
+
+    const handleCreateTask = async (e) => {
         e.preventDefault()
 
-        if (!state.editTask) {
-            try {
-                await createTask()
+        try {
+            await createTask()
 
-                setState({
-                    ...state,
-                    showTaskForm: false
-                })
+            setFormData({
+                text: '',
+                rate: 0,
+                hours: 0
+            })
 
-                setErrorMessage('')
-            } catch (err) {
-                setErrorMessage(err.message)
-            }
-        } else {
-            try {
-                await editTask()
-
-                setState({
-                    ...state,
-                    showTaskForm: false,
-                    editTask: null
-                })
-
-                setErrorMessage('')
-            } catch (err) {
-                setErrorMessage(err.message)
-            }
+            setErrorMessage('')
+        } catch (err) {
+            setErrorMessage(err.message)
         }
-    }
-
-    const closeModal = () => {
-        setState({
-            ...state,
-            showTaskForm: false,
-            editTask: null
-        })
-    }
-
-    const handleInputChange = (e) => {
-        setTaskText(e.target.value)
     }
 
     return (
         <div className="task-form">
-            <h1 className="text-center">{state.editTask ? 'Edit' : 'Create'} Task</h1>
+            <h1 className="text-center">Create Task</h1>
 
-            <form onSubmit={createOrEditTask} className="column">
+            <form onSubmit={handleCreateTask} className="column">
                 {errorMessage && <p className="error text-center">{errorMessage}</p>}
                 <input
-                    value={taskText}
+                    value={formData.text}
+                    name="text"
                     onChange={handleInputChange}
                     type="text"
                     placeholder="Enter the task text"
                     autoFocus />
-                <button>{state.editTask ? 'Save' : 'Create'}</button>
-                <button onClick={closeModal} className="cancel-btn">Cancel</button>
+                <input
+                    value={formData.rate}
+                    name="rate"
+                    onChange={handleInputChange}
+                    type="number"
+                    placeholder="Enter the task rate"
+                />
+                <input
+                    value={formData.hours}
+                    name="hours"
+                    onChange={handleInputChange}
+                    type="number"
+                    placeholder="Enter the task hours"
+                />
+                <button>Add Task</button>
+
             </form>
         </div>
     )
