@@ -200,7 +200,7 @@ button:focus-visible {
   justify-content: center;
   color: #860303;
   font-family: "MedievalSharp";
-  font-size: 100px;
+  font-size: 85px;
 }
 
 .createProjectButton {
@@ -208,7 +208,7 @@ button:focus-visible {
   justify-content: center;
   color: blanchedalmond;
   font-family: "MedievalSharp";
-  font-size: 65px;
+  font-size: 55px;
 }
 
 .viewProjectsButton {
@@ -216,13 +216,13 @@ button:focus-visible {
   justify-content: center;
   color: blanchedalmond;
   font-family: "MedievalSharp";
-  font-size: 65px;
+  font-size: 55px;
 }
 
 
 .allTaskHeader{
   color: blanchedalmond;
-  font-size: 50px;
+  font-size: 40px;
   font-family: "MedievalSharp";
   margin: 20px;
 }
