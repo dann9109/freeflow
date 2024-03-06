@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Form, Button, Alert } from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom';
 
 import { useMutation } from '@apollo/client';
 import { REGISTER_USER } from '../utils/mutations';
@@ -7,6 +8,7 @@ import { AUTHENTICATE } from '../utils/queries';
 
 
 const SignupForm = () => {
+    const navigate = useNavigate();
     // set initial form state
     const [userFormData, setUserFormData] = useState({
         username: '',
@@ -18,7 +20,7 @@ const SignupForm = () => {
     // set state for alert
     const [showAlert, setShowAlert] = useState(false);
 
-    const [addUser, { error }] = useMutation(REGISTER_USER, { 
+    const [addUser, { error }] = useMutation(REGISTER_USER, {
         refetchQueries: [AUTHENTICATE]
     });
 
@@ -53,6 +55,8 @@ const SignupForm = () => {
         } catch (err) {
             console.error(err);
         }
+
+        navigate('/profile')
 
         setUserFormData({
             username: '',
@@ -127,6 +131,7 @@ const SignupForm = () => {
                             userFormData.password
                         )
                     }
+                    style={{ color: '#555' }}
                     type="submit"
                     variant="secondary"
                 >

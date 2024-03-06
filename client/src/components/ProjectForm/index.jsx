@@ -39,12 +39,8 @@ const ProjectForm = () => {
   return (
     <form onSubmit={handleCreateProject}>
       <div className="client">
-        <h1 className="clientManagement">Client Information</h1>
-
-
-
-
-        <label htmlFor="clientTitle" className="clientLabel">Project Name:</label>
+        <h1 className="clientManagement">Project Information</h1>
+        <label htmlFor="clientTitle" className="clientLabel">Project Title:</label>
         <input className="clientInput"
           type="text"
           id="clientTitle"
