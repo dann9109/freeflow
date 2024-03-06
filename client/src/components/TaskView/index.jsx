@@ -13,22 +13,20 @@ export default function TaskView() {
   console.log(params.project_id)
   return (
     <div>
-      <h1 className="standardText">{taskData?.title} View</h1>
+      <h1 className="allTaskHeader">{taskData?.title} All Tasks</h1>
       <div className="task-wrap">
         {
           taskData?.getTasksByProjectId.tasks.map(task => (
+
             <div className="project" key={task._id}>
               <h4 className="standardText">{task.text}</h4>
               <p className="standardText">Rate: {task.rate}</p>
               <p className="standardText">Hours: {task.hours}</p>
               <p className="standardText">Total: ${task.rate * task.hours}</p>
 
-
-
-              <button className="buttonSave">Edit</button>
-              <button className="buttonSave" >Delete</button>
-
-
+              <button className="buttonSave editTaskButton">Edit</button>
+              <button className="buttonSave SaveTaskChangesButton" >Save Changes</button>
+              <button className="buttonSave deleteTaskButton" >Delete</button>
             </div>
           ))
         }

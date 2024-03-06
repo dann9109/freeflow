@@ -54,33 +54,47 @@ function TaskForm() {
     }
 
     return (
-        <div className="task-form">
-            <h1 className="text-center">Create Task</h1>
+        <div className="task-form taskCard">
+            <h1 className="text-center createTask">Create Task</h1>
 
-            <form onSubmit={handleCreateTask} className="column">
+            <form onSubmit={handleCreateTask} className="column taskForm">
+
+
                 {errorMessage && <p className="error text-center">{errorMessage}</p>}
-                <input
+
+
+                <label className="taskHead">Task Information:</label>
+                <input className="taskInput"
                     value={formData.text}
                     name="text"
                     onChange={handleInputChange}
                     type="text"
                     placeholder="Enter the task text"
                     autoFocus />
-                <input
+
+
+
+
+                <label className="taskHead">Task Rate:</label>
+                <input className="taskInput"
                     value={formData.rate}
                     name="rate"
                     onChange={handleInputChange}
                     type="number"
                     placeholder="Enter the task rate"
-                />
-                <input
+                 
+                /> 
+
+
+                <label className="taskHead">Task Hours:</label>
+                <input className="taskInput"
                     value={formData.hours}
                     name="hours"
                     onChange={handleInputChange}
                     type="number"
                     placeholder="Enter the task hours"
                 />
-                <button>Add Task</button>
+                <button className="saveTaskButton">Add Task</button>
 
             </form>
         </div>

@@ -1,0 +1,22 @@
+.taskCard{
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.createTask{
+    
+}
+
+
+
+.taskInput{}
+
+
+
+.saveTaskButton{
+    background-color: blanchedalmond;
+  border-color: #860303;
+  font-family: "MedievalSharp";
+}

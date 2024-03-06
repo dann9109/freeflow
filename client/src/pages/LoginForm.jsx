@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { Form, Button, Alert } from 'react-bootstrap';
-import { useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom';
 
 import { useMutation } from '@apollo/client';
 import { LOGIN_USER } from '../utils/mutations';
@@ -11,7 +11,7 @@ import { AUTHENTICATE } from '../utils/queries';
 
 
 const LoginForm = () => {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   const [userFormData, setUserFormData] = useState({ email: '', password: '' });
   const [validated] = useState(false);
   const [showAlert, setShowAlert] = useState(false);
@@ -60,7 +60,7 @@ const LoginForm = () => {
   };
 
   return (
-    
+
     <>
       <Form noValidate validated={validated} onSubmit={handleFormSubmit} className="formLogin">
         <Alert
@@ -104,6 +104,7 @@ const LoginForm = () => {
           disabled={!(userFormData.email && userFormData.password)}
           type="submit"
           variant="secondary"
+          style={{ color: '#555' }}
         >
           Submit
         </Button>
