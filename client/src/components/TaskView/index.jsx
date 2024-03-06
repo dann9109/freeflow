@@ -21,6 +21,7 @@ export default function TaskView() {
               <h4 className="standardText">{task.text}</h4>
               <p className="standardText">Rate: {task.rate}</p>
               <p className="standardText">Hours: {task.hours}</p>
+              <p className="standardText">Total: ${task.rate * task.hours}</p>
 
 
               <button className="buttonSave">Edit</button>
