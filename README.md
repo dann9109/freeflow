@@ -18,12 +18,13 @@ freeLancers is an application designed to empower freelancers by enabling them t
 3. Run the development server using `npm run dev`
 
 ## Deployed Link
+https://salty-coast-36768-7c025fc4e535.herokuapp.com/profile
 
 ## Github Repository
 Github: https://github.com/dann9109/freeflow
 
 ## Mock Up
-
+![Mock-up](./client/src/images/Screenshott.png)
 ## License
 MIT </br>
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
