@@ -17,17 +17,16 @@ export default function TaskView() {
       <div className="task-wrap">
         {
           taskData?.getTasksByProjectId.tasks.map(task => (
-            <div className="project projectName" key={task._id}>
-              <h4 className="standardText taskInformation">{task.text}</h4>
-              <p className="standardText taskRate">Rate: {task.rate}</p>
-              <p className="standardText taskHours">Hours: {task.hours}</p>
 
+            <div className="project" key={task._id}>
+              <h4 className="standardText">{task.text}</h4>
+              <p className="standardText">Rate: {task.rate}</p>
+              <p className="standardText">Hours: {task.hours}</p>
+              <p className="standardText">Total: ${task.rate * task.hours}</p>
 
               <button className="buttonSave editTaskButton">Edit</button>
               <button className="buttonSave SaveTaskChangesButton" >Save Changes</button>
               <button className="buttonSave deleteTaskButton" >Delete</button>
-
-
             </div>
           ))
         }

@@ -39,7 +39,12 @@ const projectSchema = new Schema({
     ref: 'Invoice'
   }
 
-})
+},
+  {
+    toJSON: {
+      virtuals: true,
+    },
+  })
 
 const Project = model('Project', projectSchema);
 
