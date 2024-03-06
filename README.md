@@ -10,6 +10,7 @@ freeLancers is an application designed to empower freelancers by enabling them t
 - GraphQL: For allowing clients to request only the data they need.
 - Express.js: For server side applications.
 - MongoDB: For storing data.
+- VS Code Liveshare: For convenient real-time collaboration
 
 ## Getting Started 
 1. Clone the repository.
