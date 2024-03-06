@@ -20,7 +20,7 @@ export default function Header() {
                         <nav className="a buttonOrder">
                             <p className="welcome">Welcome, {userData.authenticate.username}</p>
                             <div className="adiv">
-                                <button><NavLink to="/profile" className="buttonsIn">Profile</NavLink></button>
+                                <NavLink to="/profile" className="buttonsIn">Profile</NavLink>
                                 <button onClick={logoutUser} className="buttonsIn">Log Out</button>
                             </div>
                         </nav>

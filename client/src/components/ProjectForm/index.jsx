@@ -1,4 +1,4 @@
-import {useState} from 'react';
+import { useState } from 'react';
 import { useMutation, gql } from '@apollo/client';
 import { CREATE_PROJECT } from '../../utils/mutations';
 
@@ -30,6 +30,7 @@ const ProjectForm = () => {
       await createProject();
 
       console.log('Client information saved successfully');
+      window.location.assign("/profile")
     } catch (error) {
       console.error('Error saving client information:', error);
     }
