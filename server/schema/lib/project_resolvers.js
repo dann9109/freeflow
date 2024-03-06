@@ -22,11 +22,11 @@ module.exports = {
     async getTasksByProjectId(_, args, { user }) {
       if (!user)
         throw new GraphQLError('Not Authorized')
-        console.log(args)
       const project = await Project.findById(
         args.project_id
-      ).populate('tasks')
+      ).populate('tasks').lean(false)
 
+      console.log(project)
       return project
     }
   },
