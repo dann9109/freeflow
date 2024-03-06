@@ -31,7 +31,6 @@ export default function Header() {
                             <div className="adiv">
                                 <NavLink to="/login" className="buttonsIn">Login</NavLink>
                                 <NavLink to="/signup" className="buttonsIn">Sign Up</NavLink>
-                                <NavLink to="/profile" className="buttonsIn">Profile</NavLink>
                             </div>
                         </nav>
                         <p className="p1">Bring in the Calvary</p>
