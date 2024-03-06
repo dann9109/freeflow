@@ -8,6 +8,7 @@
         "dev": "concurrently \"cd ./client && npm run dev\" \"cd ./server && npm run dev\"",
         "install:client": "cd ./client && npm i",
         "install": "cd ./server && npm i",
+        "prep:install": "npm i && npm run install:client",
         "save": "git add -A && git commit -m \"ready for deploy $(date)\"",
         "push": "git push heroku main",
         "push:render": "git push origin main",

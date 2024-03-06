@@ -39,8 +39,8 @@ const ProjectForm = () => {
   return (
     <form onSubmit={handleCreateProject}>
       <div className="client">
-        <h1 className="clientManagement">Client Information</h1>
-        <label htmlFor="clientTitle" className="clientLabel">Client Title:</label>
+        <h1 className="clientManagement">Project Information</h1>
+        <label htmlFor="clientTitle" className="clientLabel">Project Title:</label>
         <input className="clientInput"
           type="text"
           id="clientTitle"
@@ -48,7 +48,7 @@ const ProjectForm = () => {
           name="title"
           onChange={handleInputChange} />
 
-        <label htmlFor="clientDescription" className="clientLabel">Client Description:</label>
+        <label htmlFor="clientDescription" className="clientLabel">Project Description:</label>
         <input className="clientInput"
           type="text"
           id="clientDescription"
