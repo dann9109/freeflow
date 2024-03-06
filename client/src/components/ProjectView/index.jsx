@@ -16,10 +16,10 @@ export default function ProjectView() {
             <p>No projects have been created.</p>
           ) : (
             projectData.map(project => (
-              <div className="project" key={project._id}>
-                <h3>{project.title}</h3>
-                <p>{project.description}</p>
-                <div className="client-info">
+              <div className="projectID" key={project._id}>
+                <h3 className="projectTitle">{project.title}</h3>
+                <p className="projectDescription">{project.description}</p>
+                <div className="client-info clientInformation">
                   <p>Client Name: {project.client_name}</p>
                   <p>Client Address: {project.client_address}</p>
                   <p>Client Phone Number: {project.client_phone_number}</p>

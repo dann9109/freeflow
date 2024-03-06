@@ -56,6 +56,7 @@ const ProjectForm = () => {
           name="description"
           onChange={handleInputChange} />
 
+
         <label htmlFor="clientName" className="clientLabel">Client Name:</label>
         <input className="clientInput"
           type="text"
@@ -63,6 +64,7 @@ const ProjectForm = () => {
           value={formData.client_name}
           name="client_name"
           onChange={handleInputChange} />
+
 
         <label htmlFor="clientAddress" className="clientLabel">Client Address :</label>
         <input className="clientInput"
@@ -72,6 +74,7 @@ const ProjectForm = () => {
           name="client_address"
           onChange={handleInputChange} />
 
+
         <label htmlFor="clientPhoneNumber" className="clientLabel">Client Phone Number:</label>
         <input className="clientInput"
           type="text"
@@ -79,8 +82,6 @@ const ProjectForm = () => {
           value={formData.client_phone_number}
           name="client_phone_number"
           onChange={handleInputChange} />
-
-
 
 
         {/* Add a button to save the client information */}
