@@ -110,7 +110,7 @@ button:focus-visible {
 .pviewh1 {
   color: blanchedalmond;
   font-family: MedievalSharp;
-  font-size: 85px;
+  font-size: 65px;
 }
 
 .projectID {
@@ -125,12 +125,12 @@ button:focus-visible {
 
 .projectDescription {
   color: blanchedalmond;
-  font-size: 40px;
+  font-size: 20px;
 }
 
 .clientInformation {
   color: blanchedalmond;
-  font-size: 20px;
+  font-size: 15px;
 }
 
 
@@ -222,7 +222,7 @@ button:focus-visible {
   justify-content: center;
   color: #860303;
   font-family: "MedievalSharp";
-  font-size: 100px;
+  font-size: 85px;
 }
 
 .createProjectButton {
@@ -230,7 +230,7 @@ button:focus-visible {
   justify-content: center;
   color: blanchedalmond;
   font-family: "MedievalSharp";
-  font-size: 65px;
+  font-size: 55px;
 }
 
 .viewProjectsButton {
@@ -238,13 +238,13 @@ button:focus-visible {
   justify-content: center;
   color: blanchedalmond;
   font-family: "MedievalSharp";
-  font-size: 65px;
+  font-size: 55px;
 }
 
 
 .allTaskHeader{
   color: blanchedalmond;
-  font-size: 50px;
+  font-size: 40px;
   font-family: "MedievalSharp";
   margin: 20px;
 }
