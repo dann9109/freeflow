@@ -110,7 +110,7 @@ button:focus-visible {
 .pviewh1 {
   color: blanchedalmond;
   font-family: MedievalSharp;
-  font-size: 85px;
+  font-size: 65px;
 }
 
 .projectID {
@@ -125,12 +125,12 @@ button:focus-visible {
 
 .projectDescription {
   color: blanchedalmond;
-  font-size: 40px;
+  font-size: 20px;
 }
 
 .clientInformation {
   color: blanchedalmond;
-  font-size: 20px;
+  font-size: 15px;
 }
 
 

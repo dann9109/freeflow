@@ -6,6 +6,7 @@ const typeDefs = gql`
     text: String
     rate: Int
     hours: Int
+    total: Int
     project: Project
     createdAt: String
     updatedAt: String
